@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mehrwertsteuerrechner.com</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/main.js" ></script>
+</head>
+<body>
+    <header>
+        <h1>Mehrwertsteuer-Rechner</h1>
+    </header>
+    <section class="tax-input">
+        <form class="tax-calculator">
+        <article>
+            <h5>Was soll berechnet werden?</h5>
+            <div class="netto">
+                <input type="radio" name="net-to-gross" id="net-to-gross" checked>
+                <label for="net-to-gross">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+            </div>
+            <div class="grossto">
+                <input type="radio" name="gross-to-net" id="gross-to-net">
+                <label for="gross-to-net">Mehrwertsteuer aufschlagen (Brutto zu Netto)</label>
+            </div>
+        </article>
+        <article>
+            <h5>Mehrwertsteuersatz</h5>
+            <div class="19">
+                <input type="radio" name="tax-rate-19" id="tax-rate-19" checked>
+                <label for="tax-rate-19">19%</label>
+            </div>
+            <div class="7">
+                <input type="radio" name="tax-rate-7" id="tax-rate-7">
+                <label for="tax-rate-7">7%</label>
+            </div>
+        </article>
+        <article>
+            <h5>Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span></h5>
+            <input type="number" name="number" id="number">
+            <button class="number-button" type="submit">Berechnen!</button>
+        </article>
+    </form>
+    </section>
+    <section class="tax-output">
+        <article>
+            <p>Ergebnis</p>
+            <div>
+                <h5>Mehrwertsteuerbetrag</h5>
+                <p class="tax-amount"></p>
+            </div>
+            <div>
+                <h5>Bruttobetrag (Endpreis)</h5>
+                <p class="gross-tax-amount"></p>
+            </div>
+            <div>
+                <h5>Nettobetrag</h5>
+                <p class="net-tax-amount"></p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
